@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FrontController
+use App\Http\Controllers\FrontController;
+use App\Models\Coin;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,6 @@ use App\Http\Controllers\FrontController
 Route::controller(FrontController::class)->group(function () {
      Route::get('/', 'index');
      Route::get('about', 'about');
-     Route::get('exchange/{id}', 'exchange');
+     Route::get('exchange/{coin}', 'exchange');
      Route::get('support', 'support');
 });
