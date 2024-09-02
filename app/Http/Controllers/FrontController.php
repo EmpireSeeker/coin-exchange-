@@ -15,16 +15,16 @@ class FrontController extends Controller
 
     public function about()
     {
-        return view('about', ['title' => 'About', 'settings' => Setting::all()]);
+        return view('about', ['title' => 'About', 'settings' => $settings]);
     }
 
-    public function exchange(Coin $id)
+    public function exchange(Coin $coin)
     {
-        return view('exchange', ['title' => 'Our rates', 'coins' => Coin::all()]);
+        return view('exchange', ['title' => 'Our rates', 'coin' => $coin]);
     }
 
     public function support()
     {
-        return view('support', ['title' => 'Support', 'settings' => Setting::all()]);
+        return view('support', ['title' => 'Support', 'settings' => $settings]);
     }
 }
