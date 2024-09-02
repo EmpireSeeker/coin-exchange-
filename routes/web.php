@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+}); */
+
+Route::controller(FrontController::class)->group(function () {
+     Route::get('/', 'index');
+     Route::get('about', 'about');
+     Route::get('exchange/{id}', 'exchange');
+     Route::get('support', 'support');
 });
