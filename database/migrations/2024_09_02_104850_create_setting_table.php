@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('setting', function (Blueprint $table) {
             $table->id();
-            $table->string('site_name');
+            $table->string('site_name')->default('CoinManiac');
             $table->string('header_image');
-            $table->string('cta_title');
-            $table->string('cta_text');
-            $table->string('social_x_link');
-            $table->string('social_ig_link');
-            $table->string('social_tk_link');
-            $table->string('terms_of_service_text');
-            $table->string('support_text');
+            $table->string('cta_title')->default('Some Text Here');
+            $table->text('cta_text')->default('Some description here');
+            $table->string('social_x_link')->default('www.x.com/you');
+            $table->string('social_ig_link')->default('www.ig.com/you');
+            $table->string('social_tk_link')->default('www.tk.com/you');
+            $table->mediumText('terms_of_service_text')->default('This is terms of service text');
+            $table->text('about_text')->default('This is about tex');
+            $table->text('support_text')->default('This is support text');
             $table->timestamps();
         });
     }
