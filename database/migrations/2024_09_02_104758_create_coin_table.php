@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->string('exchange_rate_naira');
+            $table->int('exchange_rate_naira');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
