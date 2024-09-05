@@ -10,7 +10,6 @@ class Coin extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
         'name',
         'image',
         'exchange_rate_naira',

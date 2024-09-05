@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Coin, Setting, Section}
+use App\Models\{Coin, Setting, Section};
 
 class FrontController extends Controller
 {

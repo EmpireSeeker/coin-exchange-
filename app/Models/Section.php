@@ -10,8 +10,9 @@ class Section extends Model
     use HasFactory;
 
     protected $fillable = [
-        'section_text',
+        'section_title',
         'section_type',
+        'section_content',
         'section_icon',
 
     ];

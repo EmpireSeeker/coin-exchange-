@@ -11,6 +11,7 @@ class Setting extends Model
     protected $fillable = [
         'site_name',
         'header_image',
+        'phone_number',
         'cta_title',
         'cta_text',
         'social_fb_link',
