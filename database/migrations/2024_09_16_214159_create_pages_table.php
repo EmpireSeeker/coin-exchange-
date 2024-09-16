@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('coin', function (Blueprint $table) {
+        Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('image');
-            $table->int('exchange_rate_naira');
-            $table->boolean('is_active')->default(true);
+            $table->string('title');
+            $table->string('slug')->nullable();
+            $table->string('content');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('coin');
+        Schema::dropIfExists('pages');
     }
 };
