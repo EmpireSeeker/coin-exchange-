@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
             $table->string('section_title')->nullable(); // Changed to string
-            $table->text('section_type');
+            $table->enum('section_type', ['option1', 'option2']);
             $table->string('section_content');
             $table->string('section_icon');
             $table->timestamps();

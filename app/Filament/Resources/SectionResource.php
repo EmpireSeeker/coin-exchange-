@@ -26,7 +26,12 @@ class SectionResource extends Resource
             ->schema([
 
                 Forms\Components\TextInput::make('section_title')->nullable(),
-                Forms\Components\TextInput::make('section_type'),
+                Forms\Components\Select::make('section_type')
+    ->options([
+        'How does it works' => 'How does it works',
+        'Why choose us' => 'Why choose us',
+    ])
+    ->required(),
                 Forms\Components\Textarea::make('section_content'),
                 Forms\Components\FileUpLoad::make('section_icon'),
 
